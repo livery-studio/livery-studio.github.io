@@ -9,13 +9,30 @@
 <body>
   <h1>Livery Studio</h1>
 
-  <div class="toolbar">
-    <button onclick="setTool('paint')">🎨 Paint</button>
-    <button onclick="setTool('text')">🔤 Text</button>
-    <button onclick="setTool('eraser')">🧽 Eraser</button>
-    <button onclick="clearCanvas()">🧹 Clear</button>
-    <button onclick="exportImage()">📤 Export</button>
-  </div>
+<div class="toolbar">
+
+  <label>🎨 Paint Color</label>
+  <input type="color" id="paintColor" value="#000000">
+
+  <label>📏 Brush Size</label>
+  <input type="range" id="brushSize" min="1" max="30" value="3">
+
+  <label>🧽 Eraser Size</label>
+  <input type="range" id="eraserSize" min="5" max="50" value="10">
+
+  <label>🔤 Font Size</label>
+  <input type="range" id="fontSize" min="10" max="80" value="24">
+
+  <label>🅰️ Text Color</label>
+  <input type="color" id="textColor" value="#000000">
+
+  <button onclick="setTool('paint')">🎨 Paint</button>
+  <button onclick="setTool('text')">🔤 Text</button>
+  <button onclick="setTool('eraser')">🧽 Eraser</button>
+  <button onclick="clearCanvas()">🧹 Clear</button>
+  <button onclick="exportImage()">📤 Export</button>
+
+</div>
 
   <canvas id="canvas" width="1000" height="500"></canvas>
 
